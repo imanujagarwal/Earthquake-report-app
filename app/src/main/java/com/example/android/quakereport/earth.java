@@ -6,26 +6,33 @@ package com.example.android.quakereport;
 
 public class earth {
 
+    private Double mag;
     private String place;
-    private String date;
-    private String mag;
+    private Long date;
+    private String mUrl;
 
-    earth(String mag,String place,String date){
+    earth(Double mag, String place, Long date, String mUrl) {
+        this.mag = mag;
         this.place = place;
         this.date = date;
-        this.mag = mag;
+        this.mUrl = mUrl;
+    }
+
+    public Double getMag() {
+        return mag;
     }
 
     public String getPlace(){
         return place;
     }
 
-    public String getDate(){
+
+    public Long getDate() {
         return date;
     }
 
-    public String getMag(){
-        return mag;
+    public String getUrl() {
+        return mUrl;
     }
 
 }
